@@ -15,7 +15,7 @@
                 
                     <form>
                         <div class="giris-form">
-                             <span>Kullanıcı Adını</span>
+                            <span>Kullanıcı Adını</span>
                             <input type="text" placeholder="Kullanıcı Adı" name="kullaniciadikayit">
                         </div>
                         <div class="giris-form">

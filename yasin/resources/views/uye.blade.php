@@ -13,26 +13,27 @@
         <div class="conteiner1">
             <div class="form" >
                 
-                    <form>
+                    <form action="{{ route('iletisim-sonuc') }}"  method="post">
+                        @csrf
                         <div class="giris-form">
                              <span>Kullanıcı Adını</span>
-                            <input type="text" placeholder="Kullanıcı Adı" name="kullaniciadikayit">
+                            <input type="text" placeholder="Kullanıcı Adı" name="kullaniciadi">
                         </div>
                         <div class="giris-form">
                             <span>Şifre</span>
-                            <input type="text" placeholder="Şifre" name="sifrekayit">
+                            <input type="text" placeholder="Şifre" name="sifre">
                         </div>
                         <div class="giris-form">
                             <span>Mail</span>
-                            <input type="text" placeholder="Mail" name="mailkayıt">
+                            <input type="text" placeholder="Mail" name="mail">
                         </div>
                         <div class="giris-form">
                             <span>Telefon</span>
-                            <input type="text" placeholder="Telefon" name="telefonkayit">
+                            <input type="text" placeholder="Telefon" name="telefon">
                         </div>
                         <div class="giris-form">
                             <span>Adres</span>
-                            <input type="text" placeholder="Adres" name="adreskayit">
+                            <input type="text" placeholder="Adres" name="adres">
                         </div>
 
                         <div class="giris-gönder">
