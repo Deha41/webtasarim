@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{asset('style.css')}}">
-    <title>Document</title>
-    
+@extends('tema')
+@section('body')
 
-    <div class="menu">
-        <div class="logo">LOGO</div>
-    
-    
-            <ul>
-              <li>Profil</li>
-              <li>Maçlar</li>
-              <li>Raporlar</li>
-              <li>Dosyalar</li>
-              <li>İletisim</li>
-            </ul>
-    </div>
+    <?php if (session("kullaniciad")){ ?>
     <div class="conteiner1">
         <div class="bilgi">
              <img src="{{asset('picture/img_avatar3.png')}}" alt="">
@@ -27,35 +9,27 @@
                     <table class="bilgi2">
                      <tr>
                      <th>Adı   :  </th>
-                     <td>Yasin Eren</td>
+                     <td><?php echo session("kullaniciad"); ?></td>
                      </tr>
                      <tr>
                      <th>Soyadı:</th>
-                     <td>Kovalık</td>
+                     <td><?php echo session("kullanicisoyad"); ?></td>
                      </tr>
                     <tr>
                     <th>Mesleği:</th>
                     <td>Öğrenci</td>
                     </tr>
                     <tr>
-                    <th>Clasman:</th>
-                    <td>İl</td>
-                    </tr>
-                    <tr>
                     <th>Telefon:</th>
-                    <td>05555555555</td>
+                    <td><?php echo session("kullanicitelefon"); ?></td>
                     </tr>
                     <tr>
                     <th>Email:</th>
-                    <td>info@gmail.com</td>
+                    <td><?php echo session("kullanicimail"); ?></td>
                     </tr>
                     <tr>
                     <th>Clasman:</th>
-                    <td>İl</td>
-                    </tr>
-                    <tr>
-                    <th>Clasman:</th>
-                    <td>İl</td>
+                    <td><?php echo session("kullaniciclasman"); ?></td>
                     </tr>
                     </table>
               
@@ -68,8 +42,5 @@
             </div>
 
     </div>
-</head>
-<body>
-    
-</body>
-</html>
+    <?php } ?>
+    @endsection('body')
