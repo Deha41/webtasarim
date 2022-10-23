@@ -19,7 +19,7 @@ Route::get('/form', function () {return view('uye');});
 Route::get('/refree1', function () {return view('refree');});
 Route::get('/ekleform', function () {return view('uye');});
 Route::get('/refree1', function () {return view('refree1');});
-Route::get('/doyalar', function () {return view('doyalar');});
+Route::get('/dosyalar', function () {return view('dosyalar');});
 Route::post('/ekle', [KullaniciController::class, "ekle"])->name("ekle");//ekleme yapılan fonksiyon
 Route::post('/giris', [KullaniciController::class, "giris"])->name("giris");
 Route::get('/cikis', [KullaniciController::class, "cikis"])->name("cikis");

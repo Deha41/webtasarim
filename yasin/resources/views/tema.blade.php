@@ -15,20 +15,17 @@
     
     
             <ul>
-              <li>Profil</li>
-              <li>Maçlar</li>
-              <li>Raporlar</li>
-              <li>Dosyalar <a href="/doyalar"></a></li>
-              <li><a href="/cikis"> cikis</a>
-              <?php if (session("kullaniciad")){
-                            echo "Cikis";
-                            
-                        }else{
+              <li><a href="/uye/refree">Profil</a></li>
+              
+              <li><a href="/uye/maclar">Maclar</a></li>
+              <li><a href="/uye/raporlar">Raporlar</a></li>
+              <li><a href="/dosyalar">Dosyalar</a></li>
+              <li> 
+                @if (sizeof($kullanici) == 1)
 
-                        return view("/welcome");
-                             }
-                         ?>
-                         </li>
+                @endif
+   
+                </li>
             </ul>
     </div>
     <center>

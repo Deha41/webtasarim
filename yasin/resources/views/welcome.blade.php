@@ -1,8 +1,5 @@
 @extends('tema')
 @section('body')
-
-
-
         <div class="conteiner1">
             <div class="form">
         
@@ -22,6 +19,6 @@
                  </form>
             </div>
         </div>   
-        @endsection('body')
+ @endsection('body')       
    
 
