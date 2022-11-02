@@ -9,6 +9,6 @@ class kullanici extends Model
 {
     use HasFactory;
     protected $table="kullanicilar";
-    protected $fillable=["kullaniciad","kullanicisifre","kullanicitelefon","kullanicimail","kullanicisoyad","kullanicisoyad","kullaniciclasman","kullanicimeslek"];
+    protected $fillable=["kullaniciad","kullanicisifre","kullanicitelefon","kullanicimail","kullanicisoyad","kullanicisoyad","kullaniciclasman","kullanicimeslek","kullanicistatu"];
     public $timestamps = false;
 }

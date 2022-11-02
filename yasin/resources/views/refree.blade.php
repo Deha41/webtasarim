@@ -1,7 +1,10 @@
 @extends('tema')
 @section('body')
 
-    <?php if (session("kullaniciad")){ ?>
+    <?php
+    
+$mac=App\Models\kullanici::where('kullaniciid', session("kullaniciid"))->first();
+    if (session("key") == 1){ ?>
     <div class="conteiner1">
         <div class="bilgi">
              <img src="{{asset('picture/img_avatar3.png')}}" alt="">
@@ -9,11 +12,11 @@
                     <table class="bilgi2">
                      <tr>
                      <th>Adı   :  </th>
-                     <td><?php echo session("kullaniciad"); ?></td>
+                     <td><?php echo $mac->kullaniciad; ?></td>
                      </tr>
                      <tr>
                      <th>Soyadı:</th>
-                     <td><?php echo session("kullanicisoyad"); ?></td>
+                     <td><?php echo $mac->kullanicisoyad; ?></td>
                      </tr>
                     <tr>
                     <th>Mesleği:</th>
@@ -21,15 +24,15 @@
                     </tr>
                     <tr>
                     <th>Telefon:</th>
-                    <td><?php echo session("kullanicitelefon"); ?></td>
+                    <td><?php echo $mac->kullanicitelefon; ?></td>
                     </tr>
                     <tr>
                     <th>Email:</th>
-                    <td><?php echo session("kullanicimail"); ?></td>
+                    <td><?php echo $mac->kullanicimail; ?></td>
                     </tr>
                     <tr>
                     <th>Clasman:</th>
-                    <td><?php echo session("kullaniciclasman"); ?></td>
+                    <td><?php echo $mac->kullaniciclasman; ?></td>
                     </tr>
                     </table>
               

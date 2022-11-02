@@ -11,14 +11,14 @@
                     </div>
                     <div class="giris-form">
                         <span>Şifre</span>
-                        <input type="text" placeholder="Şifre" name="sifre">
+                        <input type="password" placeholder="Şifre" name="sifre">
                     </div>
                     <div class="giris-gönder">
                          <input type="submit" value="Gönder" >
                     </div>
                  </form>
             </div>
-        </div>   
- @endsection('body')       
+        </div>
+ @endsection('body')
    
 
